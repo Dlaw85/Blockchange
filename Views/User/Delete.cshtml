@@ -1,0 +1,21 @@
+@model UserData
+
+@{
+    ViewData["Title"] = "Delete User";
+}
+
+<h2>Edit User</h2>
+
+<div class="row">
+    <div class="col-5">
+        <form asp-controller="User" asp-action="Delete" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="text" asp-for="FirstName" disable class="form-control mt-2" placeholder="FirstName" required/>
+            <input type="text" asp-for="LastName" disable class="form-control mt-2" placeholder="LastName" required/>
+            <input type="text" asp-for="Location" disable class="form-control mt-2" placeholder="Locaction" required/>
+            <input type="tel" asp-for="PhoneNumber" disable class="form-control mt-2" placeholder="PhoneNumber" requried/>
+            <input type="email" asp-for="Email" disable class="form-control mt-2" placeholder="Email" required/>
+            <button type="submit" class="btn btn-danger w-100 mt-2">Delete</button>
+        </form>
+    </div>
+</div>
